@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": { 
+    "cy:run": "npx cypress run ",
+    "cy:open": "npx cypress open "
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/srkmautomation/ecomm-cypress.git"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/integration"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +23,8 @@
   },
   "homepage": "https://github.com/srkmautomation/ecomm-cypress#readme",
   "devDependencies": {
-    "cypress": "^9.5.2"
+    "cucumber": "^7.0.0-rc.0",
+    "cypress": "^9.5.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
   }
 }
